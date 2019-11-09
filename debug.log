@@ -1,0 +1,1542 @@
+Start Debug!
+-->> "main" |
+	OrangeBot Projects
+	-->> "pid_s16_test_bench" | in: 0
+		-->> "Pid_s16" |
+		<<-- "Pid_s16" |
+		Test natural response on a constant input: 128
+		-->> "test_system" | in: 0
+		<<-- "test_system" | out: 0
+		-->> "exe" | reference: 128, feedback: 0
+			proportional: 512 | derivative: -16, integrative: 32
+			old:   128, acc:   128
+		<<-- "exe" | command: 240
+		-->> "test_system" | in: 240
+		<<-- "test_system" | out: 15
+		-->> "detect_stability" | in: 15
+		<<-- "detect_stability" |
+		 step:     0 | reference:   128 | command:   240 | output:    15
+		-->> "exe" | reference: 128, feedback: 15
+			proportional: 452 | derivative: 1, integrative: 60
+			Saturation detected. Update of accumulator not authorized
+			old:   113, acc:   128
+		<<-- "exe" | command: 256
+		-->> "test_system" | in: 256
+		<<-- "test_system" | out: 30
+		-->> "detect_stability" | in: 30
+		<<-- "detect_stability" |
+		 step:     1 | reference:   128 | command:   256 | output:    30
+		-->> "exe" | reference: 128, feedback: 30
+			proportional: 392 | derivative: 1, integrative: 56
+			Saturation detected. Update of accumulator not authorized
+			old:    98, acc:   128
+		<<-- "exe" | command: 256
+		-->> "test_system" | in: 256
+		<<-- "test_system" | out: 44
+		-->> "detect_stability" | in: 44
+		<<-- "detect_stability" |
+		 step:     2 | reference:   128 | command:   256 | output:    44
+		-->> "exe" | reference: 128, feedback: 44
+			proportional: 336 | derivative: 1, integrative: 53
+			Saturation detected. Update of accumulator not authorized
+			old:    84, acc:   128
+		<<-- "exe" | command: 256
+		-->> "test_system" | in: 256
+		<<-- "test_system" | out: 57
+		-->> "detect_stability" | in: 57
+		<<-- "detect_stability" |
+		 step:     3 | reference:   128 | command:   256 | output:    57
+		-->> "exe" | reference: 128, feedback: 57
+			proportional: 284 | derivative: 1, integrative: 49
+			Saturation detected. Update of accumulator not authorized
+			old:    71, acc:   128
+		<<-- "exe" | command: 256
+		-->> "test_system" | in: 256
+		<<-- "test_system" | out: 69
+		-->> "detect_stability" | in: 69
+		<<-- "detect_stability" |
+		 step:     4 | reference:   128 | command:   256 | output:    69
+		-->> "exe" | reference: 128, feedback: 69
+			proportional: 236 | derivative: 1, integrative: 46
+			Saturation detected. Update of accumulator not authorized
+			old:    59, acc:   128
+		<<-- "exe" | command: 256
+		-->> "test_system" | in: 256
+		<<-- "test_system" | out: 81
+		-->> "detect_stability" | in: 81
+		<<-- "detect_stability" |
+		 step:     5 | reference:   128 | command:   256 | output:    81
+		-->> "exe" | reference: 128, feedback: 81
+			proportional: 188 | derivative: 1, integrative: 43
+			old:    47, acc:   175
+		<<-- "exe" | command: 232
+		-->> "test_system" | in: 232
+		<<-- "test_system" | out: 90
+		-->> "detect_stability" | in: 90
+		<<-- "detect_stability" |
+		 step:     6 | reference:   128 | command:   232 | output:    90
+		-->> "exe" | reference: 128, feedback: 90
+			proportional: 152 | derivative: 1, integrative: 53
+			old:    38, acc:   213
+		<<-- "exe" | command: 206
+		-->> "test_system" | in: 206
+		<<-- "test_system" | out: 97
+		-->> "detect_stability" | in: 97
+		<<-- "detect_stability" |
+		 step:     7 | reference:   128 | command:   206 | output:    97
+		-->> "exe" | reference: 128, feedback: 97
+			proportional: 124 | derivative: 0, integrative: 61
+			old:    31, acc:   244
+		<<-- "exe" | command: 185
+		-->> "test_system" | in: 185
+		<<-- "test_system" | out: 102
+		-->> "detect_stability" | in: 102
+		<<-- "detect_stability" |
+		 step:     8 | reference:   128 | command:   185 | output:   102
+		-->> "exe" | reference: 128, feedback: 102
+			proportional: 104 | derivative: 0, integrative: 67
+			old:    26, acc:   270
+		<<-- "exe" | command: 171
+		-->> "test_system" | in: 171
+		<<-- "test_system" | out: 106
+		-->> "detect_stability" | in: 106
+		<<-- "detect_stability" |
+		 step:     9 | reference:   128 | command:   171 | output:   106
+		-->> "exe" | reference: 128, feedback: 106
+			proportional: 88 | derivative: 0, integrative: 73
+			old:    22, acc:   292
+		<<-- "exe" | command: 161
+		-->> "test_system" | in: 161
+		<<-- "test_system" | out: 109
+		-->> "detect_stability" | in: 109
+		<<-- "detect_stability" |
+		 step:    10 | reference:   128 | command:   161 | output:   109
+		-->> "exe" | reference: 128, feedback: 109
+			proportional: 76 | derivative: 0, integrative: 77
+			old:    19, acc:   311
+		<<-- "exe" | command: 153
+		-->> "test_system" | in: 153
+		<<-- "test_system" | out: 112
+		-->> "detect_stability" | in: 112
+		<<-- "detect_stability" |
+		 step:    11 | reference:   128 | command:   153 | output:   112
+		-->> "exe" | reference: 128, feedback: 112
+			proportional: 64 | derivative: 0, integrative: 81
+			old:    16, acc:   327
+		<<-- "exe" | command: 145
+		-->> "test_system" | in: 145
+		<<-- "test_system" | out: 114
+		-->> "detect_stability" | in: 114
+		<<-- "detect_stability" |
+		 step:    12 | reference:   128 | command:   145 | output:   114
+		-->> "exe" | reference: 128, feedback: 114
+			proportional: 56 | derivative: 0, integrative: 85
+			old:    14, acc:   341
+		<<-- "exe" | command: 141
+		-->> "test_system" | in: 141
+		<<-- "test_system" | out: 116
+		-->> "detect_stability" | in: 116
+		<<-- "detect_stability" |
+		 step:    13 | reference:   128 | command:   141 | output:   116
+		-->> "exe" | reference: 128, feedback: 116
+			proportional: 48 | derivative: 0, integrative: 88
+			old:    12, acc:   353
+		<<-- "exe" | command: 136
+		-->> "test_system" | in: 136
+		<<-- "test_system" | out: 117
+		-->> "detect_stability" | in: 117
+		<<-- "detect_stability" |
+		 step:    14 | reference:   128 | command:   136 | output:   117
+		-->> "exe" | reference: 128, feedback: 117
+			proportional: 44 | derivative: 0, integrative: 91
+			old:    11, acc:   364
+		<<-- "exe" | command: 135
+		-->> "test_system" | in: 135
+		<<-- "test_system" | out: 118
+		-->> "detect_stability" | in: 118
+		<<-- "detect_stability" |
+		 step:    15 | reference:   128 | command:   135 | output:   118
+		-->> "exe" | reference: 128, feedback: 118
+			proportional: 40 | derivative: 0, integrative: 93
+			old:    10, acc:   374
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 119
+		-->> "detect_stability" | in: 119
+		<<-- "detect_stability" |
+		 step:    16 | reference:   128 | command:   133 | output:   119
+		-->> "exe" | reference: 128, feedback: 119
+			proportional: 36 | derivative: 0, integrative: 95
+			old:     9, acc:   383
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 120
+		-->> "detect_stability" | in: 120
+		<<-- "detect_stability" |
+		 step:    17 | reference:   128 | command:   131 | output:   120
+		-->> "exe" | reference: 128, feedback: 120
+			proportional: 32 | derivative: 0, integrative: 97
+			old:     8, acc:   391
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 121
+		-->> "detect_stability" | in: 121
+		<<-- "detect_stability" |
+		 step:    18 | reference:   128 | command:   129 | output:   121
+		-->> "exe" | reference: 128, feedback: 121
+			proportional: 28 | derivative: 0, integrative: 99
+			old:     7, acc:   398
+		<<-- "exe" | command: 127
+		-->> "test_system" | in: 127
+		<<-- "test_system" | out: 121
+		-->> "detect_stability" | in: 121
+		<<-- "detect_stability" |
+		 step:    19 | reference:   128 | command:   127 | output:   121
+		-->> "exe" | reference: 128, feedback: 121
+			proportional: 28 | derivative: 0, integrative: 101
+			old:     7, acc:   405
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 122
+		-->> "detect_stability" | in: 122
+		<<-- "detect_stability" |
+		 step:    20 | reference:   128 | command:   129 | output:   122
+		-->> "exe" | reference: 128, feedback: 122
+			proportional: 24 | derivative: 0, integrative: 102
+			old:     6, acc:   411
+		<<-- "exe" | command: 126
+		-->> "test_system" | in: 126
+		<<-- "test_system" | out: 122
+		-->> "detect_stability" | in: 122
+		<<-- "detect_stability" |
+		 step:    21 | reference:   128 | command:   126 | output:   122
+		-->> "exe" | reference: 128, feedback: 122
+			proportional: 24 | derivative: 0, integrative: 104
+			old:     6, acc:   417
+		<<-- "exe" | command: 128
+		-->> "test_system" | in: 128
+		<<-- "test_system" | out: 122
+		-->> "detect_stability" | in: 122
+		<<-- "detect_stability" |
+		 step:    22 | reference:   128 | command:   128 | output:   122
+		-->> "exe" | reference: 128, feedback: 122
+			proportional: 24 | derivative: 0, integrative: 105
+			old:     6, acc:   423
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 122
+		-->> "detect_stability" | in: 122
+		<<-- "detect_stability" |
+		 step:    23 | reference:   128 | command:   129 | output:   122
+		-->> "exe" | reference: 128, feedback: 122
+			proportional: 24 | derivative: 0, integrative: 107
+			old:     6, acc:   429
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 123
+		-->> "detect_stability" | in: 123
+		<<-- "detect_stability" |
+		 step:    24 | reference:   128 | command:   131 | output:   123
+		-->> "exe" | reference: 128, feedback: 123
+			proportional: 20 | derivative: 0, integrative: 108
+			old:     5, acc:   434
+		<<-- "exe" | command: 128
+		-->> "test_system" | in: 128
+		<<-- "test_system" | out: 123
+		-->> "detect_stability" | in: 123
+		<<-- "detect_stability" |
+		 step:    25 | reference:   128 | command:   128 | output:   123
+		-->> "exe" | reference: 128, feedback: 123
+			proportional: 20 | derivative: 0, integrative: 109
+			old:     5, acc:   439
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 123
+		-->> "detect_stability" | in: 123
+		<<-- "detect_stability" |
+		 step:    26 | reference:   128 | command:   129 | output:   123
+		-->> "exe" | reference: 128, feedback: 123
+			proportional: 20 | derivative: 0, integrative: 111
+			old:     5, acc:   444
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 124
+		-->> "detect_stability" | in: 124
+		<<-- "detect_stability" |
+		 step:    27 | reference:   128 | command:   131 | output:   124
+		-->> "exe" | reference: 128, feedback: 124
+			proportional: 16 | derivative: 0, integrative: 112
+			old:     4, acc:   448
+		<<-- "exe" | command: 128
+		-->> "test_system" | in: 128
+		<<-- "test_system" | out: 124
+		-->> "detect_stability" | in: 124
+		<<-- "detect_stability" |
+		 step:    28 | reference:   128 | command:   128 | output:   124
+		-->> "exe" | reference: 128, feedback: 124
+			proportional: 16 | derivative: 0, integrative: 113
+			old:     4, acc:   452
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 124
+		-->> "detect_stability" | in: 124
+		<<-- "detect_stability" |
+		 step:    29 | reference:   128 | command:   129 | output:   124
+		-->> "exe" | reference: 128, feedback: 124
+			proportional: 16 | derivative: 0, integrative: 114
+			old:     4, acc:   456
+		<<-- "exe" | command: 130
+		-->> "test_system" | in: 130
+		<<-- "test_system" | out: 124
+		-->> "detect_stability" | in: 124
+		<<-- "detect_stability" |
+		 step:    30 | reference:   128 | command:   130 | output:   124
+		-->> "exe" | reference: 128, feedback: 124
+			proportional: 16 | derivative: 0, integrative: 115
+			old:     4, acc:   460
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 124
+		-->> "detect_stability" | in: 124
+		<<-- "detect_stability" |
+		 step:    31 | reference:   128 | command:   131 | output:   124
+		-->> "exe" | reference: 128, feedback: 124
+			proportional: 16 | derivative: 0, integrative: 116
+			old:     4, acc:   464
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    32 | reference:   128 | command:   132 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 116
+			old:     3, acc:   467
+		<<-- "exe" | command: 128
+		-->> "test_system" | in: 128
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    33 | reference:   128 | command:   128 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 117
+			old:     3, acc:   470
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    34 | reference:   128 | command:   129 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 118
+			old:     3, acc:   473
+		<<-- "exe" | command: 130
+		-->> "test_system" | in: 130
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    35 | reference:   128 | command:   130 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 119
+			old:     3, acc:   476
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    36 | reference:   128 | command:   131 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 119
+			old:     3, acc:   479
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    37 | reference:   128 | command:   131 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 120
+			old:     3, acc:   482
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 125
+		-->> "detect_stability" | in: 125
+		<<-- "detect_stability" |
+		 step:    38 | reference:   128 | command:   132 | output:   125
+		-->> "exe" | reference: 128, feedback: 125
+			proportional: 12 | derivative: 0, integrative: 121
+			old:     3, acc:   485
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    39 | reference:   128 | command:   133 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 121
+			old:     2, acc:   487
+		<<-- "exe" | command: 129
+		-->> "test_system" | in: 129
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    40 | reference:   128 | command:   129 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 122
+			old:     2, acc:   489
+		<<-- "exe" | command: 130
+		-->> "test_system" | in: 130
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    41 | reference:   128 | command:   130 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 122
+			old:     2, acc:   491
+		<<-- "exe" | command: 130
+		-->> "test_system" | in: 130
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    42 | reference:   128 | command:   130 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 123
+			old:     2, acc:   493
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    43 | reference:   128 | command:   131 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 123
+			old:     2, acc:   495
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    44 | reference:   128 | command:   131 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 124
+			old:     2, acc:   497
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    45 | reference:   128 | command:   132 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 124
+			old:     2, acc:   499
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    46 | reference:   128 | command:   132 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 125
+			old:     2, acc:   501
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    47 | reference:   128 | command:   133 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 125
+			old:     2, acc:   503
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 126
+		-->> "detect_stability" | in: 126
+		<<-- "detect_stability" |
+		 step:    48 | reference:   128 | command:   133 | output:   126
+		-->> "exe" | reference: 128, feedback: 126
+			proportional: 8 | derivative: 0, integrative: 126
+			old:     2, acc:   505
+		<<-- "exe" | command: 134
+		-->> "test_system" | in: 134
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    49 | reference:   128 | command:   134 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 126
+			old:     1, acc:   506
+		<<-- "exe" | command: 130
+		-->> "test_system" | in: 130
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    50 | reference:   128 | command:   130 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 126
+			old:     1, acc:   507
+		<<-- "exe" | command: 130
+		-->> "test_system" | in: 130
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    51 | reference:   128 | command:   130 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 127
+			old:     1, acc:   508
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    52 | reference:   128 | command:   131 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 127
+			old:     1, acc:   509
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    53 | reference:   128 | command:   131 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 127
+			old:     1, acc:   510
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    54 | reference:   128 | command:   131 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 127
+			old:     1, acc:   511
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    55 | reference:   128 | command:   131 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 128
+			old:     1, acc:   512
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    56 | reference:   128 | command:   132 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 128
+			old:     1, acc:   513
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    57 | reference:   128 | command:   132 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 128
+			old:     1, acc:   514
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    58 | reference:   128 | command:   132 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 128
+			old:     1, acc:   515
+		<<-- "exe" | command: 132
+		-->> "test_system" | in: 132
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    59 | reference:   128 | command:   132 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 129
+			old:     1, acc:   516
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    60 | reference:   128 | command:   133 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 129
+			old:     1, acc:   517
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    61 | reference:   128 | command:   133 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 129
+			old:     1, acc:   518
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    62 | reference:   128 | command:   133 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 129
+			old:     1, acc:   519
+		<<-- "exe" | command: 133
+		-->> "test_system" | in: 133
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    63 | reference:   128 | command:   133 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 130
+			old:     1, acc:   520
+		<<-- "exe" | command: 134
+		-->> "test_system" | in: 134
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    64 | reference:   128 | command:   134 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 130
+			old:     1, acc:   521
+		<<-- "exe" | command: 134
+		-->> "test_system" | in: 134
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    65 | reference:   128 | command:   134 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 130
+			old:     1, acc:   522
+		<<-- "exe" | command: 134
+		-->> "test_system" | in: 134
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    66 | reference:   128 | command:   134 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 130
+			old:     1, acc:   523
+		<<-- "exe" | command: 134
+		-->> "test_system" | in: 134
+		<<-- "test_system" | out: 127
+		-->> "detect_stability" | in: 127
+		<<-- "detect_stability" |
+		 step:    67 | reference:   128 | command:   134 | output:   127
+		-->> "exe" | reference: 128, feedback: 127
+			proportional: 4 | derivative: 0, integrative: 131
+			old:     1, acc:   524
+		<<-- "exe" | command: 135
+		-->> "test_system" | in: 135
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    68 | reference:   128 | command:   135 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    69 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    70 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    71 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    72 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    73 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    74 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    75 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    76 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    77 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    78 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    79 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    80 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    81 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    82 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    83 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    84 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    85 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    86 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    87 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    88 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    89 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    90 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    91 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    92 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    93 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    94 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    95 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    96 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    97 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    98 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:    99 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   100 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   101 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   102 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   103 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   104 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   105 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   106 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   107 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   108 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   109 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   110 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   111 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   112 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   113 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   114 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   115 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   116 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   117 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   118 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   119 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   120 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   121 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   122 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   123 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   124 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   125 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   126 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   127 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   128 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   129 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   130 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   131 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   132 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   133 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   134 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   135 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   136 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   137 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   138 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   139 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   140 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   141 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   142 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   143 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   144 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   145 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   146 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   147 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   148 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   149 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   150 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   151 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   152 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   153 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   154 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   155 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   156 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   157 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   158 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   159 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   160 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   161 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   162 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   163 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   164 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   165 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   166 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" |
+		 step:   167 | reference:   128 | command:   131 | output:   128
+		-->> "exe" | reference: 128, feedback: 128
+			proportional: 0 | derivative: 0, integrative: 131
+			old:     0, acc:   524
+		<<-- "exe" | command: 131
+		-->> "test_system" | in: 131
+		<<-- "test_system" | out: 128
+		-->> "detect_stability" | in: 128
+		<<-- "detect_stability" | Stability Detected!
+		 step:   168 | reference:   128 | command:   131 | output:   128
+		stability reached after 69 steps
+	<<-- "pid_s16_test_bench" | out: 0
+	-->> "~Pid_s16" |
+	<<-- "~Pid_s16" |
+<<-- "main" |
+
+Debug has Ended!
